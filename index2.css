@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 26%;
+    border: 3px solid white;
+    border-radius: 50px;
+    margin: 5px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: rgb(240, 154, 154);
+}
+
+.nav-list{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li{
+    list-style: none;
+    padding: 26px 30px;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list li a:hover{
+    color: yellow;
+}
+
+.rightNav{
+    position: relative;
+    background-color: transparent;
+    width: 270px;
+    text-align: right;
+    padding: 10 20;
+}
+
+
+.rightNav.active.search-input{
+    width:200px;
+    border-radius: 30px;
+  }
+  
+  .rightNav.active .btn {
+    transform: translateX(150px);
+  }
+
+
+.rightNav input{
+    width: 200px;
+    padding: 5px;
+}
+
+.search-input {
+    width: 0;
+    height: 20px;
+    padding: 4px;
+    border: none;
+    outline: none;
+    transition: width 0.3s ease-out;
+  }
+
+.rightNav input{
+    width: 200;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 5px;
+    transition: width 1s ease;
+    background-color: lightcyan;
+    appearance: auto;
+}
+
+.rightNav a .fas{
+    color: aqua;
+    font-size: 18px;
+}
+
+#search{
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+
+#hour,
+#minute,
+#second {
+	position: absolute;
+	background: red;
+	border-radius: 10px;
+	transform-origin: bottom;
+}
+
+#hour {
+	width: 1.8%;
+	height: 25%;
+	top: 25%;
+	left: 48.85%;
+	opacity: 0.8;
+}
+
+#minute {
+	width: 1.6%;
+	height: 30%;
+	top: 19%;
+	left: 48.9%;
+	opacity: 0.8;
+}
+
+#second {
+	width: 1%;
+	height: 40%;
+	top: 9%;
+	left: 49.25%;
+	opacity: 0.8;
+}
+
+.clockdate-wrapper {
+    background-color: red;
+    padding: 50px;
+    max-width: 10px;
+    width: 5%;
+    text-align: center;
+    border: radius 50%;
+    top: 15%;
+    float: right;
+    margin: 1090px;
+    margin-top: 140px;
+    border-radius: 50%;
+    position: fixed;
+}
+#clock{
+    
+    font-family: 'Ubuntu', sans-serif;
+    font-size:17px;
+    color:#fff;
+}
+#clock span {
+    color:white;
+    text-shadow:0px 0px 1px rgb(223, 213, 233);
+    font-size:15px;
+    position:relative;
+    top:-5px;
+    left:10px;
+}
+#date {
+    letter-spacing:3px;
+    font-size:14px;
+    font-family:arial,sans-serif;
+    color:#fff;
+}
+
+#datestring {
+    letter-spacing:3px;
+    font-size:14px;
+    font-family:arial,sans-serif;
+    color:#fff;
+}
+
+.background{
+    background: rgba(0, 0, 0, 0.5) url('./Image/cityy.avif');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.firstSection{
+    height: 100vh;
+}
+
+.firstHalf{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+}
+
+.secondHalf{
+    width: 30%;
+}
+
+.secondHalf img{
+    width: 70%;
+    border: 4px solid white;
+    border-radius: 150px;
+    display: block;
+    margin: auto;
+}
+
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin: auto;
+    
+}
+
+
+
+/* .timebox{
+    
+    color: white;
+    display: flex; 
+    border-radius: 5px;
+    height: auto;
+    width: auto;            
+    display: inline-block;
+    text-align: center;
+    padding: auto;
+    margin: 3px;
+    margin-top: 40px;
+} 
+
+#India{
+    background-image: url("img/India.jpg");
+    border-radius: 7px;
+    border: 1px solid black;
+    width: 10vw;
+    height:50vh;
+    cursor: pointer;
+} 
+
+#London{
+    background-image: url("img/London.jpg");
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 10vw;
+    height:50vh;
+    cursor: pointer;
+}
+
+#Newyork{
+    background-image: url("img/Us.jpeg");
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 10vw;
+    height:50vh;
+    cursor: pointer;
+}
+
+#Sydney{
+    background-image: url("img/Sydney.jpg");
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 10vw;
+    height:50vh;
+    cursor: pointer;
+}
+
+#Tokyo{
+    background-image: url("img/Tokyo.jpg");
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 10vw;
+    height:50vh;
+    cursor: pointer;
+}  */
+
+.text-big{
+    font-size: 30px;
+}
+
+.text-small{
+    font-size: 18px;
+}
+
+.btn{
+    padding: 6px 20px;
+    margin: 2px 4px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: none;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    float: right;
+}
+
+.button{
+    padding: 6px 20px;
+    border: white;
+    border-radius: 8px; 
+    cursor: pointer;  
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.button:hover{ 
+    cursor: pointer; 
+    background-color: rgb(240, 154, 154); 
+}
+
+.btn:hover{
+    background-color: rgb(240, 154, 154);
+    cursor: pointer;
+}
+
+.btn-sm{
+    padding: 6px 10px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.btn-dark{padding: 7px 20px;
+    margin: 2px 4px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: none;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    float: left;
+    cursor: pointer;
+
+    padding: 6px 10px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.btn-dark:hover{
+    background-color: rgb(240, 154, 154);
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin: auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.section-left{
+    flex-direction: row-reverse;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin: auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.section-right{ 
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin: auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.paras{
+    padding: 0px 65px;
+}
+
+.sectionTag{
+    padding: 16px 0;
+}
+
+.sectionSubTag{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.thumbnail img{
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 26px;
+    margin-top: 19px;
+}
+
+.contact{
+    background-color: rgb(241, 221, 221);
+}
+
+.text-center{
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.form{
+    max-width: 62%;
+    margin: auto;
+}
+
+.form-input{
+    margin: 7px 0;
+    padding-top: 30%;
+    padding: 0.3% 11px;
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid gray;
+    border-radius: 6px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.text-footer{
+    text-align: center;
+    padding: 30px 5px;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    margin: auto;
+    color: white;
+    font-size: small;
+}
+
+.burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5px;
+    top: 15px;
+}
+
+.line{
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 3px 3px;
+}
+
+/* Cascaading image */
+.flex {
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    gap: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    align-items: center;
+}
+
+.img-div {
+    width: 20%;
+    height: 400px;
+    display: inline-block;
+    /* background-color: aqua; */
+    position: relative;
+}
+
+.img-div .fulltime {
+    display: none;
+}
+
+.img-div img {
+    border-radius: 7px;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    margin: 30px;
+    cursor: pointer;
+    display: flex;
+}
+
+.active {
+    width: 40%;
+    /* background-color: yellow; */
+    transition: width 1s ease-in;
+}
+
+.active .fulltime {
+    display: block; 
+}
+
+.time {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+}
